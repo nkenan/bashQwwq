@@ -1,6 +1,6 @@
 # qwwq
 This is a small collection of bash-scripts for bash on macOS and Linux:
-aliases, nodejs-server, camera-server, mqtt-broker.
+
 Main part of qwwq is scriptsLoader.sh - it is the only file you have to provide to the bash.
 
 # Installation
@@ -22,4 +22,4 @@ verbose=false && verbose=true
 If any tmux session is running uncomment the last line.
 
 # Still to do:
-nodejs-server, camera-server, mqtt-broker
+nodejs-server, surveillance-server, mqtt-broker,
