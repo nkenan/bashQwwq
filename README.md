@@ -10,13 +10,13 @@ Append following code to your ~/.bashrc:
 ## qwwq - https://github.com/nzmTINKER/qwwq
 
 # settings for qwwq
-verbose=false && verbose=true
+qwwqVerbose=true
+#history -c && clear
 
 # logic
-[[ -f ~/qwwq/scriptsLoader.sh ]] && curl -z ~/qwwq/scriptsLoader.sh http://nzm.mirfac.uberspace.de/scriptsLoader.sh &> /dev/null
-[[ -f ~/qwwq/scriptsLoader.sh ]] && . ~/qwwq/scriptsLoader.sh &> /dev/null && [[ $verbose == true ]] && echo "scriptsLoader.sh loaded (version: $(~/qwwq/scriptsLoader.sh --version))"
-
-#tmux attach -t 1 &>/dev/null
+[[ -f ~/qwwq/scriptsLoader.sh ]] && ping -c 1 -W 1 8.8.8.8 &> /dev/null && [[ $? == "0" ]] && curl --retry 1 --retry-max 1 -z ~/qwwq/scriptsLoader.sh http://nzm.mirfac.uberspace.de/scriptsLoader.sh &> /dev/null || curl --retry 1 --retry-max 1 -O http://nzm.mirfac.uberspace.de/scriptsLoader.sh &> /dev/null
+[[ -f ~/qwwq/scriptsLoader.sh ]] && . ~/qwwq/scriptsLoader.sh
+tmux attach -t 1 &> /dev/null
 ### **************************************************************************************
 ```
 If any tmux session is running uncomment the last line.
