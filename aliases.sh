@@ -1,4 +1,7 @@
 #!/bin/bash
+outputVerbose=true
+outputDebug=true
+
 shopt -s expand_aliases
 
 package_pacman=false;
@@ -20,12 +23,11 @@ alias pull="git pull origin master"
 
 alias nodemon="nodemon -e \"hbs js css html\""
 
-if [[ "$package_pacman" = true ]]; then
-  alias install="sudo pacman -Sy"
-  alias upgrade="sudo pacman -Syu"
-fi
-
 if [[ "$package_aptGet" = true ]] ; then
   alias install="sudo apt-get install"
   alias upgrade="sudo apt-get update && sudo apt-get -y upgrade"
+fi
+if [[ "$package_pacman" = true ]]; then
+  alias install="sudo pacman -Sy"
+  alias upgrade="sudo pacman -Syu"
 fi
