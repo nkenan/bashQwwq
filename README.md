@@ -24,7 +24,15 @@ If any tmux session is running uncomment the last line.
 # Usage for aliases
 Type `alias` for list of aliases. Package management is included for: pacman, apt-get. Only binaries from main repositories are used.
 
-#Cheatsheets
+# Cheatsheets (third-party)
+`cheatsheets tmux`
+`cheatsheets weechat`
+
+# Cheatsheets (qwwq)
+`surveillance --cheatsheet`
+`encryption --cheatsheet`
+`mqtt --cheatsheet`
+`nodejs-server --cheatsheet`
 
 # Audio and video surveillance
 
