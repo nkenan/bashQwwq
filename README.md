@@ -1,10 +1,10 @@
-# qwwq
-This is a small collection of bash-scripts for bash on macOS and Linux:
+# qwwq Quick Guide
+A small collection of bash-scripts for macOS and Linux:
 cheatsheets, audio and video surveillance, encryption, mqtt, nodejs-server
 Main part of qwwq is scriptsLoader.sh - it is the only file you have to provide to the bash.
 
 # Installation
-Append following code to your ~/.bashrc:
+Append following code to your ~/.bashrc for scriptsLoader.sh:
 ```
 ### **************************************************************************************
 ## qwwq - https://github.com/nzmTINKER/qwwq
