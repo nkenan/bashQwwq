@@ -42,7 +42,7 @@ createConfiguration() {
 }
 
 loadConfiguration() {
-  [[ ! -f $scriptDirectory/$scriptConfig ]] && createConfiguration
+  [[ ! -f $scriptDirectory/$scriptConfig ]]  && createConfiguration
   [[ -f $scriptDirectory/$scriptConfig ]] && . $scriptDirectory/$scriptConfig
 }
 
@@ -60,4 +60,3 @@ badArguments() {
   output $lastErrorCode "INSUFFICIENT ARGUMENTS" "Please type $script --help for further information"
   helpScreen
 }
-#loadConfiguration

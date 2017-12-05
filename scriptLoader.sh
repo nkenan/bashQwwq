@@ -1,5 +1,4 @@
 #!/bin/bash
-. /home/nzm/qwwq/qwwq.sh #load qwwq
 
 loadScripts() {
   loadConfiguration
