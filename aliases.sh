@@ -19,15 +19,12 @@ alias rb="reboot"
 alias push="git add . && git commit -m \"shell-generated commit\" && git push"
 alias pull="git pull origin master"
 ###############################################################
-if [[ "$package_apt_get" == true ]] ; then
-  alias install="sudo apt-get install"
-  alias upgrade="sudo apt-get update && sudo apt-get -y upgrade"
-fi
+[ "$package_apt_get" ] &&
+alias install="sudo apt-get install" &&
+alias upgrade="sudo apt-get update && sudo apt-get -y upgrade"
 
-if [[ "$package_pacman" == true ]]; then
-  echo "pacman TRUE"
-  alias install="sudo pacman -Sy"
-  alias upgrade="sudo pacman -Syu"
-fi
+[ "$package_pacman" ] && 
+alias install="sudo pacman -Sy" && 
+alias upgrade="sudo pacman -Syu"
 ###############################################################
 return 0;

@@ -1,12 +1,26 @@
 #!/bin/bash
 
+helpScreen() {
+  echo -e "
+$script - loading automatically all scripts provided to $scriptConfig
+Made with qwwq.sh bash-libary (http://github.com/nzmTINKER/qwwq)
+
+--help :                Printing this help screen
+--update :              Updating this script automatically
+--reset-configuration : Resetting configuration.
+
+--load-scripts :       Executing all script files which were
+                        provided to $scriptConfig
+"
+}
+
 loadScripts() {
   loadConfiguration
   lastErrorCode="0"
   ###
   for scriptFile in ${scriptFiles[@]}
         do
-          [[ -f $scriptDirectory/$scriptFile ]] && . $scriptDirectory/$scriptFile
+          [[ -f $HOME/qwwq/$scriptFile ]] && . $HOME/qwwq/$scriptFile
           lastErrorCode=$?
           output $lastErrorCode $scriptFile "Executed and returned:"
         done
@@ -27,7 +41,7 @@ Made with qwwq.sh bash-libary (http://github.com/nzmTINKER/qwwq)
 }
 
 ### ******* LOGIC *******
-[[ "$1" == '' ]] && lastErrorCode="2" && badArguments
+[[ "$1" == '' ]] && lastErrorCode="2" && echo "Insufficient arguments." && helpScreen
 
 while [ "$1" != '' ]
   do
