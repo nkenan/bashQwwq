@@ -3,7 +3,7 @@
 configurationKeys=(clients scriptFiles)
 outputError=true #config
 outputVerbose=true #config
-outputDebug=true #config
+outputDebug=true #config :-)
 useTmux=false
 
 output() {
